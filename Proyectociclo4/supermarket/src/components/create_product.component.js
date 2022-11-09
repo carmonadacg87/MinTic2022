@@ -6,16 +6,16 @@ import axios from "axios";
 
 export default class CreatedProduct extends Component{
     constructor(props){
-    super(props);
-    this.onChangeProductName=this.onChangeProductName.bind(this);
-    this.onChangeProductCodigo=this.onChangeProductCodigo.bind(this);
-    this.onChangeProductCant=this.onChangeProductCant.bind(this);
-    this.onSubmit=this.onSubmit.bind(this);
-    this.state={
-        name:"",
-        codigo:"",
-        cant:"",
-    };
+        super(props);
+        this.onChangeProductName=this.onChangeProductName.bind(this);
+        this.onChangeProductCodigo=this.onChangeProductCodigo.bind(this);
+        this.onChangeProductCant=this.onChangeProductCant.bind(this);
+        this.onSubmit=this.onSubmit.bind(this);
+        this.state={
+            name:"",
+            codigo:"",
+            cant:"",
+        };
     }
 
     onChangeProductName(e){
@@ -45,7 +45,7 @@ export default class CreatedProduct extends Component{
 
     render(){
         return(
-        <div class="form-wrapper">
+        <div className="form-wrapper">
             <Form onSubmit={this.onSubmit}>
                 <Form.Group controlId="Codigo">
                     <Form.Label>Codigo</Form.Label>
