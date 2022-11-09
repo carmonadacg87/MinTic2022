@@ -1,6 +1,5 @@
 import React,{Component} from "react";
 import Form from "react-bootstrap/Form";
-import ListGroup from "react-bootstrap/ListGroup";
 import Button from "react-bootstrap/Button";
 import axios from "axios";
 
@@ -63,17 +62,7 @@ export default class CreatedProduct extends Component{
                     onChange={this.onChangeProductName}
                     />
                 </Form.Group>
-                <ListGroup controlId="Categoria">
-                <ListGroup.Label>Categoria</ListGroup.Label>
-                <ListGroup.Item>Aseo</ListGroup.Item>
-                <ListGroup.Item>Aromaticos y Condimentos</ListGroup.Item>
-                <ListGroup.Item>Bebidas</ListGroup.Item>
-                <ListGroup.Item>Carnicos y Embutidos</ListGroup.Item>
-                <ListGroup.Item>Granos y Abarrotes</ListGroup.Item>
-                <ListGroup.Item>Lacteos</ListGroup.Item>
-                <ListGroup.Item>Licores</ListGroup.Item>
-                <ListGroup.Control type="text"/>
-                </ListGroup>
+                
                 <Form.Group controlId="Cantidad">
                     <Form.Label>Cantidad</Form.Label>
                     <Form.Control
