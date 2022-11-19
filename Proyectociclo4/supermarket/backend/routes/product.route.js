@@ -52,7 +52,7 @@ router.route("/update-product/:id").put((req, res, next) => {
         return next(error);
       } else {
         res.json(data);
-        console.log("Product updated successfully !");
+        console.log("Actualizacion de producto realizada !");
       }
     }
   );
