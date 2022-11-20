@@ -22,10 +22,9 @@ function App() {
             <Container>
               <Navbar.Brand>
                 <Link to={"/create-product"} className="nav-link">
-                  App React Supermarket
+                Supermarket
                 </Link>
               </Navbar.Brand>
-
               <Nav className="justify-content-end">
                 <Nav>
                   <Link to={"/create-product"} className="nav-link">
