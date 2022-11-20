@@ -37,7 +37,7 @@ export default class CreatedProduct extends Component{
             cant:this.state.cant,
         };
         axios
-            .post("http://localhost:4000/products/created-product",productObject)
+            .post("http://localhost:4000/products/create-product",productObject)
             .then((res) => console.log(res.data));
         this.setState({name:"",codigo:"",cant:""});
     }

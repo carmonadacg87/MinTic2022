@@ -31,7 +31,7 @@ export default class ProductTableRow extends Component {
         <td>
           <Link
             className="edit-link"
-            path={"product/:id"}
+            path={"products/:id"}
             to={"/edit-product/" + this.props.obj._id}
           >
             Editar
