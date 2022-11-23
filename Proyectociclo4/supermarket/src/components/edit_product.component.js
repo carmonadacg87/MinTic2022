@@ -17,12 +17,10 @@ export default class EditProduct extends Component {
     };
   }
 
-  componentDidMount() {
+  componentDidMount(){
     axios
       .get(
-        "http://localhost:4000/products/edit-product/" +
-          this.props.match.params.id
-      )
+        "http://localhost:4000/products/edit-product/" + this.props.match.params.id)
       .then((res) => {
         this.setState({
           name: res.data.name,
@@ -56,10 +54,7 @@ onSubmit(e){
     };
     axios
       .put(
-        "http://localhost:4000/products/update-product/" +
-          this.props.match.params.id,
-        productObject
-      )
+        "http://localhost:4000/products/update-product/" + this.props.match.params.id,productObject)
       .then((res) => {
         console.log(res.data);
         console.log("Product successfully updated");
@@ -78,28 +73,17 @@ onSubmit(e){
         <Form onSubmit={this.onSubmit}>
         <Form.Group controlId="Codigo">
             <Form.Label>Codigo</Form.Label>
-            <Form.Control
-            type="text"
-            value={this.state.codigo}
-            onChange={this.onChangeProductCodigo}
-            />
+            <Form.Control type="text" value={this.state.codigo} onChange={this.onChangeProductCodigo}/>
         </Form.Group>
+
         <Form.Group controlId="Name">
             <Form.Label>Nombre</Form.Label>
-            <Form.Control 
-            type="text"
-            value={this.state.name}
-            onChange={this.onChangeProductName}
-            />
+            <Form.Control type="text" value={this.state.name} onChange={this.onChangeProductName}/>
         </Form.Group>
                 
         <Form.Group controlId="Cantidad">
             <Form.Label>Cantidad</Form.Label>
-            <Form.Control
-            type="number"
-            value={this.state.cant}
-            onChange={this.onChangeProductCant}
-            />
+            <Form.Control type="text" value={this.state.cant} onChange={this.onChangeProductCant}/>
         </Form.Group>
 
           <Button variant="danger" size="lg" block="block" type="submit">

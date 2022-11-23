@@ -10,12 +10,12 @@ let productSchema = new Schema(
       type: String,
     },
     cant: {
-      type: Number,
+      type: String,
     },
   },
   {
-    collection: "productos",
+    collection: "products",
   }
 );
 
-module.exports = mongoose.model("Producto", productSchema);
+module.exports = mongoose.model("Product", productSchema);

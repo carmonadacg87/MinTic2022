@@ -37,7 +37,7 @@ export default class CreatedProduct extends Component{
             cant:this.state.cant,
         };
         axios
-            .post("http://localhost:4000/products/create-product",productObject)
+            .post("http://localhost:4000/products/create-product/",productObject)
             .then((res) => console.log(res.data));
         this.setState({name:"",codigo:"",cant:""});
     }
@@ -48,28 +48,17 @@ export default class CreatedProduct extends Component{
             <Form onSubmit={this.onSubmit}>
                 <Form.Group controlId="Codigo">
                     <Form.Label>Codigo</Form.Label>
-                    <Form.Control
-                    type="text"
-                    value={this.state.codigo}
-                    onChange={this.onChangeProductCodigo}
-                    />
+                    <Form.Control type="text" value={this.state.codigo} onChange={this.onChangeProductCodigo}/>
                 </Form.Group>
+
                 <Form.Group controlId="Name">
                     <Form.Label>Nombre</Form.Label>
-                    <Form.Control 
-                    type="text"
-                    value={this.state.name}
-                    onChange={this.onChangeProductName}
-                    />
+                    <Form.Control type="text" value={this.state.name} onChange={this.onChangeProductName}/>
                 </Form.Group>
                 
                 <Form.Group controlId="Cantidad">
                     <Form.Label>Cantidad</Form.Label>
-                    <Form.Control
-                    type="number"
-                    value={this.state.cant}
-                    onChange={this.onChangeProductCant}
-                    />
+                    <Form.Control type="text" value={this.state.cant} onChange={this.onChangeProductCant}/>
                 </Form.Group>
                 
                 <Button variant="danger" size="lg" block="block" type="submit" className="mt-4">Crear Producto</Button>
