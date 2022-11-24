@@ -30,7 +30,6 @@ export default class CreatedProduct extends Component{
     }
 
     onSubmit(){
-        console.log(this.state.name)
         const productObject={
             name:this.state.name,
             codigo:this.state.codigo,

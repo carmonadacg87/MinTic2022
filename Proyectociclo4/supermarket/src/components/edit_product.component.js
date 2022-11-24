@@ -46,7 +46,6 @@ onChangeProductCant(e){
 }
 
 onSubmit(){
-    //e.PreventDefault();
     const productObject={
         name:this.state.name,
         codigo:this.state.codigo,
