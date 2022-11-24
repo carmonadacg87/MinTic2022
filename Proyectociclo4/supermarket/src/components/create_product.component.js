@@ -29,17 +29,18 @@ export default class CreatedProduct extends Component{
         this.setState({cant:e.target.value})
     }
 
-    onSubmit(e){
-        e.PreventDefault();
+    onSubmit(){
+        console.log(this.state.name)
         const productObject={
             name:this.state.name,
             codigo:this.state.codigo,
-            cant:this.state.cant,
+            cant:this.state.cant
         };
         axios
-            .post("http://localhost:4000/products/create-product/",productObject)
-            .then((res) => console.log(res.data));
-        this.setState({name:"",codigo:"",cant:""});
+            .post("http://localhost:4000/products/create-product",productObject)
+            .then((res) =>{console.log(res.data)})
+            //.catch(error=>{console.log(error)});
+        //this.setState({name:"",codigo:"",cant:""});
     }
 
     render(){

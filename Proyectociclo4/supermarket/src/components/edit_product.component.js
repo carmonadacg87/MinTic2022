@@ -45,8 +45,8 @@ onChangeProductCant(e){
     this.setState({cant:e.target.value})
 }
 
-onSubmit(e){
-    e.PreventDefault();
+onSubmit(){
+    //e.PreventDefault();
     const productObject={
         name:this.state.name,
         codigo:this.state.codigo,
